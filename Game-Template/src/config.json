@@ -1,0 +1,398 @@
+{
+	"images":
+	[
+		{
+			"name": "backgroundTileable",
+			"path": "./assets/images/level/backgroundTileable.png",
+			"width": 320,
+			"height": 320
+		},
+		{
+			"name": "mainPlatformTileset",
+			"path": "./assets/images/level/mainPlatformTileset.png",
+			"width": 80,
+			"height": 80
+		},
+		{
+			"name": "exit",
+			"path": "./assets/images/objects/exit.png",
+			"width": 64,
+			"height": 64
+		},
+		{
+			"name": "items",
+			"path": "./assets/images/objects/items.png",
+			"width": 48,
+			"height": 48
+		},
+		{
+			"name": "treasure",
+			"path": "./assets/images/objects/treasure.png",
+			"width": 32,
+			"height": 16
+		},
+		{
+			"name": "playerIdle",
+			"path": "./assets/images/player/player_idle.png",
+			"width": 32,
+			"height": 32
+		},
+		{
+			"name": "playerRunning",
+			"path": "./assets/images/player/player_running.png",
+			"width": 128,
+			"height": 32
+		},
+		{
+			"name": "playerWalking",
+			"path": "./assets/images/player/player_walking.png",
+			"width": 64,
+			"height": 32
+		},
+		{
+			"name": "playerFalling",
+			"path": "./assets/images/player/player_falling.png",
+			"width": 64,
+			"height": 32
+		},
+		{
+			"name": "playerDucking",
+			"path": "./assets/images/player/player_ducking.png",
+			"width": 64,
+			"height": 16
+		},
+		{
+			"name": "playerJumping",
+			"path": "./assets/images/player/player_jumping.png",
+			"width": 128,
+			"height": 32
+		},
+		{
+			"name": "playerDying",
+			"path": "./assets/images/player/player_dying.png",
+			"width": 1024,
+			"height": 256
+		},
+		{
+			"name": "playerDead",
+			"path": "./assets/images/player/player_dead.png",
+			"width": 240,
+			"height": 240
+		},
+		{
+			"name": "playerDeadContinue",
+			"path": "./assets/images/player/player_dead_continue.png",
+			"width": 240,
+			"height": 240
+		},
+		{
+			"name": "playerDeadQuit",
+			"path": "./assets/images/player/player_dead_quit.png",
+			"width": 240,
+			"height": 240
+		},
+		{
+			"name": "playerHurting",
+			"path": "./assets/images/player/player_hurting.png",
+			"width": 128,
+			"height": 16
+		},
+		{
+			"name": "playerDoubleJumping",
+			"path": "./assets/images/player/player_jumping_2.png",
+			"width": 160,
+			"height": 16
+		},
+		{
+			"name": "playerCharging",
+			"path": "./assets/images/player/player_charging.png",
+			"width": 192,
+			"height": 24
+		},
+		{
+			"name": "playerFloating",
+			"path": "./assets/images/player/player_floating.png",
+			"width": 128,
+			"height": 24
+		},
+		{
+			"name": "playerAiming",
+			"path": "./assets/images/player/player_aiming_short.png",
+			"width": 144,
+			"height": 24
+		},
+		{
+			"name": "playerFiring",
+			"path": "./assets/images/player/player_firing.png",
+			"width": 220,
+			"height": 36
+		},
+		{
+			"name": "playerSleeping",
+			"path": "./assets/images/player/player_sleeping.png",
+			"width": 384,
+			"height": 32
+		},
+		{
+			"name": "logo",
+			"path": "./assets/images/ui/logo.png",
+			"width": 128,
+			"height": 32
+		},
+		{
+			"name": "uiTiles",
+			"path": "./assets/images/ui/uiTiles.png",
+			"width": 32,
+			"height": 32
+		},
+		{
+			"name": "logoBig",
+			"path": "./assets/images/ui/logo-big.png",
+			"width": 512,
+			"height": 128
+		},
+		{
+			"name": "gun",
+			"path": "./assets/images/ui/gun_ui.png",
+			"width": 100,
+			"height": 64
+		},
+		{
+			"name": "bullet",
+			"path": "./assets/images/ui/bullet_ui.png",
+			"width": 84,
+			"height": 28
+		},
+		{
+			"name": "bulletEmpty",
+			"path": "./assets/images/ui/bullet_empty_ui.png",
+			"width": 84,
+			"height": 28
+		},
+		{
+			"name": "heart",
+			"path": "./assets/images/ui/heart_ui.png",
+			"width": 64,
+			"height": 64
+		},
+		{
+			"name": "heartEmpty",
+			"path": "./assets/images/ui/heart_empty_ui.png",
+			"width": 64,
+			"height": 64
+		},
+		{
+			"name": "charging",
+			"path": "./assets/images/ui/player_charging_ui.png",
+			"width": 96,
+			"height": 96
+		},
+		{
+			"name": "floating",
+			"path": "./assets/images/ui/player_floating_ui.png",
+			"width": 64,
+			"height": 96
+		},
+		{
+			"name": "aiming",
+			"path": "./assets/images/ui/player_aiming_ui.png",
+			"width": 88,
+			"height": 88
+		},
+		{
+			"name": "jumping",
+			"path": "./assets/images/ui/player_jumping_ui.png",
+			"width": 64,
+			"height": 64
+		},
+		{
+			"name": "walkingLeft",
+			"path": "./assets/images/ui/player_walking_left_ui.png",
+			"width": 64,
+			"height": 64
+		},
+		{
+			"name": "walkingRight",
+			"path": "./assets/images/ui/player_walking_right_ui.png",
+			"width": 64,
+			"height": 64
+		},
+		{
+			"name": "ducking",
+			"path": "./assets/images/ui/player_ducking_ui.png",
+			"width": 64,
+			"height": 64
+		}
+	],
+	"fonts":
+	[
+		{
+			"name": "Joystix",
+			"path": "./assets/fonts/Joystix.ttf"
+		},
+		{
+			"name": "FunFont",
+			"path": "./assets/fonts/font.ttf"
+		},
+		{
+			"name": "Cloudy",
+			"path": "./assets/fonts/SunnyCloudy-One.ttf"
+		}
+	],
+	"sounds":
+	[
+		{
+			"name": "choir",
+			"path": "./assets/sounds/choir.mp3",
+			"size": 1,
+			"volume": 0.7,
+			"loop": true
+		},
+		{
+			"name": "select",
+			"path": "./assets/sounds/bell_select.wav",
+			"size": 1,
+			"volume": 0.6
+		},
+		{
+			"name": "jump",
+			"path": "./assets/sounds/jump.wav",
+			"size": 1,
+			"volume": 0.2
+		},
+		{
+			"name": "jetpack",
+			"path": "./assets/sounds/jetpack.wav",
+			"size": 1,
+			"volume": 0.2,
+			"loop": true
+		},
+		{
+			"name": "charging",
+			"path": "./assets/sounds/charging.wav",
+			"size": 1,
+			"volume": 0.3
+		},
+		{
+			"name": "boost",
+			"path": "./assets/sounds/boost.wav",
+			"size": 1,
+			"volume": 0.25
+		},
+		{
+			"name": "aim",
+			"path": "./assets/sounds/aim.wav",
+			"size": 1,
+			"volume": 0.2
+		},
+		{
+			"name": "gun",
+			"path": "./assets/sounds/gun.mp3",
+			"size": 1,
+			"volume": 0.2
+		},
+		{
+			"name": "hurt",
+			"path": "./assets/sounds/hurt.wav",
+			"size": 1,
+			"volume": 0.35
+		},
+		{
+			"name": "explosion",
+			"path": "./assets/sounds/explosion.wav",
+			"size": 1,
+			"volume": 0.3
+		},
+		{
+			"name": "land",
+			"path": "./assets/sounds/land.mp3",
+			"size": 1,
+			"volume": 0.2
+		},
+		{
+			"name": "struggle",
+			"path": "./assets/sounds/struggle.wav",
+			"size": 1,
+			"volume": 0.5,
+			"loop": true
+		},
+		{
+			"name": "fall",
+			"path": "./assets/sounds/fall.wav",
+			"size": 1,
+			"volume": 0.7
+		},
+		{
+			"name": "birds",
+			"path": "./assets/sounds/birds.wav",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "victory",
+			"path": "./assets/sounds/victorySparkles.mp3",
+			"size": 1,
+			"volume": 0.7
+		},
+		{
+			"name": "violin",
+			"path": "./assets/sounds/violin.wav",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "electricPiano",
+			"path": "./assets/sounds/electric_piano.wav",
+			"size": 1,
+			"volume": 0.2
+		},
+		{
+			"name": "piano",
+			"path": "./assets/sounds/piano.wav",
+			"size": 1,
+			"volume": 0.75
+		},
+		{
+			"name": "mystery",
+			"path": "./assets/sounds/mystery.wav",
+			"size": 1,
+			"volume": 0.25
+		},
+		{
+			"name": "die",
+			"path": "./assets/sounds/die.wav",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "die",
+			"path": "./assets/sounds/die.wav",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "die2",
+			"path": "./assets/sounds/die2.wav",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "die3",
+			"path": "./assets/sounds/die3.wav",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "crash",
+			"path": "./assets/sounds/crash.mp3",
+			"size": 1,
+			"volume": 0.4
+		},
+		{
+			"name": "item",
+			"path": "./assets/sounds/item_get.wav",
+			"size": 1,
+			"volume": 0.35
+		}
+	]
+}

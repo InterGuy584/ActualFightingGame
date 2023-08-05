@@ -1,0 +1,31 @@
+const SoundName = 
+{
+    Ambiance:      'ambiance',
+    Select:        'select',
+    Choir:         'choir',
+    Jump:          'jump',
+    Jetpack:       'jetpack',
+    Aim:           'aim',
+    Gun:           'gun',
+    Charging:      'charging',
+    Boost:         'boost',
+    Voice:         'voice',
+    Hurt:          'hurt',
+    GameOver:      'no',
+    Item:          'item',
+    Fall:          'fall',
+    Die:           'die',
+    Die2:          'die2',
+    Die3:          'die3',
+    Struggle:      'struggle',
+    Land:          'land',
+    Explosion:     'explosion',
+    Crash:         'crash',
+    Birds:         'birds',
+    Mystery:       'mystery',
+    Victory:       'victory',
+    ElectricPiano: 'electricPiano',
+    Piano:         'piano',
+    Violin:        'violin'
+}
+export default SoundName;
