@@ -28,6 +28,7 @@ export default class LevelMaker
 		//console.log(shuffledChunkData)
 
 		// first, iterate through each chunk's data, convert then into an array of tiles.
+		/*
 		for (let j = 0; j < LevelMaker.TOTAL_CHUNK_HEIGHT; j++)
 		{
 			for (let i = 0; i < LevelMaker.TOTAL_CHUNK_WIDTH; i++)
@@ -36,8 +37,10 @@ export default class LevelMaker
 				else LevelMaker.processRestOfChunkRow(shuffledChunkData[(j * LevelMaker.TOTAL_CHUNK_WIDTH) + i].split(""), tiles, j, i);
 			}
 		}
+		*/
 		
-		return new Level(new Tilemap(LevelMaker.CHUNK_WIDTH * LevelMaker.TOTAL_CHUNK_WIDTH, LevelMaker.CHUNK_HEIGHT * LevelMaker.TOTAL_CHUNK_HEIGHT, tiles, ImageName.MainPlatformTileset));
+		LevelMaker.processBasicRoom(tiles);
+		return new Level(new Tilemap(40, 20, tiles, ImageName.MainPlatformTileset));
 	}
 
 	static makeEmptyLevel()
@@ -111,6 +114,25 @@ export default class LevelMaker
 				else tiles.push(TileType.Empty);
 			}
 		}
+	}
+
+	static processBasicRoom(tiles) {
+
+		for (let j = 0; j < LevelMaker.CHUNK_HEIGHT; j++) {
+			for (let i = 0; i < LevelMaker.CHUNK_WIDTH; i++) {
+				if (j == LevelMaker.CHUNK_HEIGHT - 3 && i == (LevelMaker.CHUNK_WIDTH/2) - 2) {
+					tiles.push(TileType.Player);
+					continue;
+				}
+
+				if (j < LevelMaker.CHUNK_HEIGHT - 2) {
+					tiles.push(TileType.Empty);
+				} else {
+					tiles.push(TileType.Cloud);
+				}
+			}
+		}
+		console.log(tiles);
 	}
 	
 	// this replaces the placeholders with the actual tile types.

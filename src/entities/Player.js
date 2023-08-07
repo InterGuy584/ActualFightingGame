@@ -43,10 +43,9 @@ export default class Player extends Entity
 		this.level = level;
 
 		this.speedScalar = 5;
-		this.gravityScalar = 15;
-		this.maxGravity = 150;
-		this.frictionScalar = 0.95;
-		this.gravityForce = new Vector(0, 1000);
+		this.gravityScalar = 10;
+		//this.maxGravity = 150;
+		this.frictionScalar = 0.9;
 		this.groundHeight = LevelMaker.GROUND_HEIGHT * Tile.TILE_SIZE - this.dimensions.y;
 		this.jumpState = JumpState.Asleep;
 		this.rotation = 0;

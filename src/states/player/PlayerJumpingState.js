@@ -36,21 +36,44 @@ export default class PlayerJumpingState extends PlayerState
 				this.player.sprites = SpriteFactory.getSprite(PlayerStateName.DoubleJumping)
 				this.player.currentAnimation = this.animation.double;
 				this.player.jumpState = JumpState.TripleJump;
-				this.player.velocity.y = -250;
+				this.player.velocity.y = -300;
+				this.changeDirection();
 				break;
 			case JumpState.SingleJump:
 				this.player.sprites = SpriteFactory.getSprite(PlayerStateName.DoubleJumping)
 				this.player.currentAnimation = this.animation.double;
                 this.player.jumpState = JumpState.DoubleJump;
-                this.player.velocity.y = -250;
+                this.player.velocity.y = -300;
+				this.changeDirection();
                 break;
             case JumpState.OnGround:
 				this.player.sprites = SpriteFactory.getSprite(PlayerStateName.Jumping);
 				this.player.currentAnimation = this.animation.single;
                 this.player.jumpState = JumpState.SingleJump;
                 this.player.velocity.y = -300;
+				this.changeDirection();
                 break;
         }
+	}
+
+	changeDirection() {
+		let keyVal = 0;
+		if (keys.a || keys.A) {
+			keyVal += 1;
+		}
+		if (keys.d || keys.D) {
+			keyVal += 2;
+		}
+		switch (keyVal) {
+			case 1:
+				this.player.velocity.x = -100;
+				break;
+			case 2:
+				this.player.velocity.x = 100;
+				break;
+			default:
+				this.player.velocity.x = 0;
+		}
 	}
 
 	exit()
@@ -64,7 +87,7 @@ export default class PlayerJumpingState extends PlayerState
 	{
         this.player.currentAnimation.update(dt);
 		super.gravity(dt);
-		super.airControl();
+		//super.airControl();
 
         if (this.player.currentAnimation.isDone())
             this.player.changeState(PlayerStateName.Falling, this);

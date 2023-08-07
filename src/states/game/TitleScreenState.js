@@ -18,7 +18,7 @@ export default class TitleScreenState extends State
 
 	enter()
 	{
-		sounds.play(SoundName.Choir);
+		//sounds.play(SoundName.Choir);
 		this.level = LevelMaker.makeLevel();
 
 		this.player = new Player
@@ -34,7 +34,7 @@ export default class TitleScreenState extends State
 	{
 		if (keys.Enter)
 		{
-			sounds.play(SoundName.Select)
+			//sounds.play(SoundName.Select)
 			stateMachine.change(GameStateName.Transition,
 			{
 				fromState: this,

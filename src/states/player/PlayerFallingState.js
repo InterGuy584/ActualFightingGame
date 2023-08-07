@@ -41,7 +41,7 @@ export default class PlayerFallingState extends PlayerState
 		super.aim();
 		if (keys.s || keys.S) this.player.velocity.y = 250;
 
-		super.airControl();
+		//super.airControl();
         super.land();
 	}
 }

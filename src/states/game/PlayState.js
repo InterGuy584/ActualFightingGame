@@ -19,7 +19,7 @@ export default class PlayState extends State
 	 */
 	enter(parameters)
 	{
-		sounds.play(SoundName.Choir);
+		//sounds.play(SoundName.Choir);
 		this.level = parameters.level;
 		this.player = parameters.player;
 		this.camera = parameters.camera;
@@ -55,6 +55,7 @@ export default class PlayState extends State
 
 	async update(dt)
 	{
+		/*
 		if (this.chance == 'ready')
 		{
 			this.chance = 'waiting';
@@ -86,6 +87,7 @@ export default class PlayState extends State
 					sounds.play(SoundName.Piano);
 			}
 		}
+		*/
 		this.player.update(dt);
 
 		// keep the player from wandering offscreen

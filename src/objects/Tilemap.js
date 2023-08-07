@@ -143,8 +143,7 @@ export default class Tilemap
 	{
 		if (tile == TileType.Player)
 		{
-			// check if it's within range of the second-to-last chunk
-			// if so, make it where the player spawns.
+			/*
 			if
 			(
 				x >= LevelMaker.CHUNK_WIDTH &&
@@ -152,7 +151,8 @@ export default class Tilemap
 				y >= LevelMaker.CHUNK_HEIGHT * (LevelMaker.TOTAL_CHUNK_HEIGHT - 1) &&
 				y < LevelMaker.CHUNK_HEIGHT * LevelMaker.TOTAL_CHUNK_HEIGHT
 			)
-				this.playerSpawn = new Vector(x * Tile.TILE_SIZE, y * Tile.TILE_SIZE);
+			*/
+			this.playerSpawn = new Vector(x * Tile.TILE_SIZE, y * Tile.TILE_SIZE);
 		}
 	}
 

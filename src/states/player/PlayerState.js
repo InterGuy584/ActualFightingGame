@@ -37,10 +37,7 @@ export default class PlayerState extends State
 	
     gravity(dt)
     {
-		this.player.velocity.y =
-		this.player.velocity.y + this.player.gravityScalar < this.player.maxGravity ?
-			this.player.velocity.y + this.player.gravityScalar :
-			this.player.maxGravity;
+		this.player.velocity.y = this.player.velocity.y + this.player.gravityScalar;
         this.player.position.add(this.player.velocity, dt);
     }
 
