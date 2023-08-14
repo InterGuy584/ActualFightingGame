@@ -67,10 +67,20 @@ fetch('./src/config.json').then(response => response.json())
 		keys[event.key] = true;
 		if (event.key == "Shift")
 		{
+			if (keys.w)
+			{
+				keys.w = false;
+				keys.W = true;
+			}
 			if (keys.a)
 			{
 				keys.a = false;
 				keys.A = true;
+			}
+			if (keys.s)
+			{
+				keys.s = false;
+				keys.S = true;
 			}
 			if (keys.d)
 			{
@@ -98,13 +108,24 @@ fetch('./src/config.json').then(response => response.json())
 	});
 	canvas.addEventListener('keyup', event =>
 	{
+		// Make a KeyHelp class for this stuff
 		keys[event.key] = false;
 		if (event.key == "Shift")
 		{
+			if (keys.W)
+			{
+				keys.W = false;
+				keys.w = true;
+			}
 			if (keys.A)
 			{
 				keys.A = false;
 				keys.a = true;
+			}
+			if (keys.S)
+			{
+				keys.S = false;
+				keys.s = true;
 			}
 			if (keys.D)
 			{

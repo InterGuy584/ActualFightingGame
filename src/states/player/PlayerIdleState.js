@@ -5,6 +5,7 @@ import PlayerStateName from "../../enums/PlayerStateName.js";
 import { keys, mouseCoor, cX, cY } from "../../globals.js";
 import PlayerState from "./PlayerState.js"
 import SpriteFactory from "../../services/SpriteFactory.js"
+import JumpState from "../../enums/JumpState.js";
 
 export default class PlayerIdleState extends PlayerState
 {
@@ -23,8 +24,10 @@ export default class PlayerIdleState extends PlayerState
 
 	enter()
 	{
+		console.log("land")
 		this.player.sprites = SpriteFactory.getSprite(PlayerStateName.Idle);
 		this.player.currentAnimation = this.animation;
+		this.player.jumpstate = JumpState.OnGround;
 	}
 
 	update(dt)

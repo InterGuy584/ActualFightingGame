@@ -132,7 +132,6 @@ export default class LevelMaker
 				}
 			}
 		}
-		console.log(tiles);
 	}
 	
 	// this replaces the placeholders with the actual tile types.

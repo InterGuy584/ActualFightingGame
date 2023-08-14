@@ -21,7 +21,7 @@ export default class PlayerState extends State
 		this.player = player;
 	}
 	
-    jump() { if (keys.Space) this.player.changeState(PlayerStateName.Jumping, this); }
+    jump() { if (keys.w || keys.W) this.player.changeState(PlayerStateName.Jumping, this); }
     duck() { if (keys.s || keys.S) this.player.changeState(PlayerStateName.Ducking, this); }
 	superJump() { if ((keys.q || keys.Q) && this.player.boost && !this.player.boostUsed) this.player.changeState(PlayerStateName.SuperJumping, this); }
 	float() { if ((keys.f || keys.F) && this.player.hover) this.player.changeState(PlayerStateName.Floating, this); }

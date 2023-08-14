@@ -49,7 +49,7 @@ export default class TransitionState extends State
 	 */
 	fadeOut()
 	{
-		timer.tween(this, ['transitionAlpha'], [1], 'static', 1.5, () =>
+		timer.tween(this, ['transitionAlpha'], [1], 'static', 0.5, () =>
 		{
 			this.currentState = this.toState;
 			this.currentState.enter(this.toStateEnterParameters);
@@ -74,6 +74,6 @@ export default class TransitionState extends State
 	 */
 	fadeIn()
 	{
-		timer.tween(this, ['transitionAlpha'], [0], 'static', 1.5, () => { stateMachine.currentState = this.currentState; });
+		timer.tween(this, ['transitionAlpha'], [0], 'static', 0.5, () => { stateMachine.currentState = this.currentState; });
 	}
 }

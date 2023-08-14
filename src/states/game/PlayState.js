@@ -223,7 +223,7 @@ export default class PlayState extends State
 			y += 60;
 		}
 
-		this.tripleControls(x, y, this.player.jumpState);
+		//this.tripleControls(x, y, this.player.jumpState);
 		
 		if (this.player.gun)
 		{
@@ -249,7 +249,7 @@ export default class PlayState extends State
 		x = CANVAS_WIDTH - 192;
 		y = 10;
 
-		this.renderHearts(x, y);
+		//this.renderHearts(x, y);
 
 		context.restore();
 	}

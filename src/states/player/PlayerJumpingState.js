@@ -28,6 +28,7 @@ export default class PlayerJumpingState extends PlayerState
 
 	enter()
 	{
+		console.log("jump")
 		sounds.stop(SoundName.Jump);
 		sounds.play(SoundName.Jump);
         switch (this.player.jumpState)
@@ -66,10 +67,10 @@ export default class PlayerJumpingState extends PlayerState
 		}
 		switch (keyVal) {
 			case 1:
-				this.player.velocity.x = -100;
+				this.player.velocity.x = -60;
 				break;
 			case 2:
-				this.player.velocity.x = 100;
+				this.player.velocity.x = 60;
 				break;
 			default:
 				this.player.velocity.x = 0;
@@ -78,7 +79,8 @@ export default class PlayerJumpingState extends PlayerState
 
 	exit()
 	{
-		keys.Space = false;
+		keys.w = false;
+		keys.W = false;
 		this.animation.single.refresh();
 		this.animation.double.refresh();
 	}
@@ -87,7 +89,6 @@ export default class PlayerJumpingState extends PlayerState
 	{
         this.player.currentAnimation.update(dt);
 		super.gravity(dt);
-		//super.airControl();
 
         if (this.player.currentAnimation.isDone())
             this.player.changeState(PlayerStateName.Falling, this);

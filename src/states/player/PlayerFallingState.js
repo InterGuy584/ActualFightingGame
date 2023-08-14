@@ -23,6 +23,7 @@ export default class PlayerFallingState extends PlayerState
 
 	enter()
 	{
+		console.log("fall")
 		this.player.sprites = SpriteFactory.getSprite(PlayerStateName.Falling);
 		this.player.currentAnimation = this.animation;
 		if (this.player.jumpState == JumpState.OnGround) this.player.jumpState = JumpState.SingleJump
@@ -30,12 +31,15 @@ export default class PlayerFallingState extends PlayerState
 
 	update(dt)
 	{
+		// How do I make the held w key trigger a jump on the ground, but not in the air?
+		console.log(keys.w);
 		super.gravity(dt);
         this.player.currentAnimation.update(dt);
 
-		// if player does not have triple jump, don't let them jump after double
-		// else don't let them jump after triple
-		if (keys.Space && ((this.player.jumpState != JumpState.DoubleJump && !this.player.triple) || (this.player.triple && this.player.jumpState != JumpState.TripleJump))) this.player.changeState(PlayerStateName.Jumping, this);
+		// don't let them jump after double jump
+		if ((keys.w || keys.W)
+		&& (this.player.jumpState != JumpState.DoubleJump))
+				this.player.changeState(PlayerStateName.Jumping, this);
 		super.superJump();
 		super.float();
 		super.aim();

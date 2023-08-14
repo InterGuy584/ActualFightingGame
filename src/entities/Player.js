@@ -106,12 +106,11 @@ export default class Player extends Entity
 		stateMachine.add(PlayerStateName.Hurting, 	   new PlayerHurtingState(this));
 		stateMachine.add(PlayerStateName.Dying, 	   new PlayerDyingState(this));
 
-		if (DEBUG)
-		{
-			this.jumpState = JumpState.OnGround;
-			stateMachine.change(PlayerStateName.Idle)
-		}
-		else stateMachine.change(PlayerStateName.Sleeping);
+		//if (DEBUG)
+		//{
+		this.jumpState = JumpState.OnGround;
+		stateMachine.change(PlayerStateName.Idle)
+		//}
 
 		return stateMachine;
 	}

@@ -43,12 +43,12 @@ export default class PlayerWalkingState extends PlayerState
 		if (keys.a)
 		{
 			this.player.direction = Direction.Left;
-			this.player.velocity.x = Math.max(this.player.velocity.x - this.player.speedScalar * this.player.frictionScalar, -this.player.velocityLimit.x);
+			this.player.velocity.x = -60;
 		}
 		else if (keys.d)
 		{
 			this.player.direction = Direction.Right;
-			this.player.velocity.x = Math.min(this.player.velocity.x + this.player.speedScalar * this.player.frictionScalar, this.player.velocityLimit.x);
+			this.player.velocity.x = 60
 		}
 		else if (keys.A || keys.D) this.player.changeState(PlayerStateName.Running, this);
 		else this.stop();
@@ -58,12 +58,7 @@ export default class PlayerWalkingState extends PlayerState
 
 	stop()
 	{
-		if (Math.abs(this.player.velocity.x) > 0) this.player.velocity.x *= this.player.frictionScalar;
-
-		if (Math.abs(this.player.velocity.x) < 5)
-		{
-			this.player.velocity.x = 0;
-			this.player.changeState(PlayerStateName.Idle, this);
-		}
+		this.player.velocity.x = 0;
+		this.player.changeState(PlayerStateName.Idle, this);
 	}
 }
